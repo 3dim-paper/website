@@ -20,7 +20,6 @@ div.white {
 }
 div.white figure {
   margin: 0;
-  padding: 0 auto;
 }
 
 
@@ -34,21 +33,20 @@ div.input-output {
 div.input-output img {
   width: 50%;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   border:  none;
 }
 div.input-output span {
-  position:  relative;
-  top: 40%;
-  left: -5%;
+  position: absolute;
   color: black;
   z-index: 1;
   font-size: 200%;
 }
 div.input-output video {
+  width: 50%;
   margin: 0;
-  padding: 0;
   border: none;
+  padding: 1rem;
 }
 
 
@@ -68,22 +66,24 @@ div.authors p.smaller {
 div.topgallery {
   width:  100%;
   margin: 0;
-  padding: 40px 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   background-color: white;
 }
-div.topgallery div.input-output {
-  width: 25%;
-}
 
 figure.sampler > div {
-  height: 500px;
+  /* height: 500px; */
   overflow: hidden;
+  height: 42vw;
 }
 figure.sampler object {
-  margin: 0 80px 500px 80px;
+  /* margin: 0 80px 500px 80px; */
+  margin: 2rem;
+}
+
+div.white figure figcaption p {
+  margin: 0;
 }
 
 div.sota-comparisons {
@@ -121,63 +121,6 @@ div.sota-comparisons div.input-output {
 div.sota-comparisons div.input-output img {
   width: 16%;
 }
-div.sota-comparisons div.input-output span {
-  left: -2.5%;
-}
-
-.playground-container {
-  display: flex;
-  width: 100%;
-}
-
-.playground-column {
-  width: 50%;
-  float: left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.caption-picker {
-  text-align: center;
-}
-
-.caption-picker select {
-  border: none;
-  outline: none;
-  font-size: 2em;
-  color: white;
-  background-color: transparent;
-  appearance: none;
-}
-
-.caption-picker select:hover {
-  cursor: pointer;
-  color: green;
-}
-
-#gallery {
-}
-
-.gallery-main-image {
-  width: 100%;
-}
-
-.image-picker {
-  width: 100%;
-}
-
-.icon {
-  width: 12.5%;
-  float: left;
-  padding-right: 2px;
-  padding-top: 2px;
-}
-
-.icon:hover {
-  cursor: pointer;
-  border: 1px solid white;
-}
 
 div.authors {
   background-color: rgb(26, 26, 26);
@@ -187,14 +130,12 @@ div.authors {
 
 div.authors p {
   text-align: center;
-  max-width 1000px;
   margin: 0;
   padding: 0;
 }
 
 div.abstract {
   background-color: rgb(0, 0, 0);
-  /* background-color: rgb(245, 245, 245); */
   color: rgb(255, 255, 255);
 }
 
@@ -213,8 +154,8 @@ a.read-paper button:hover {
   background-color: rgb(26, 26, 26);
 }
 
-@media only screen and (max-width: 899px) {
-  div.nomobile {
+@media only screen and (max-width: 999px) {
+  .nomobile {
     display: none;
   }
 
@@ -230,8 +171,18 @@ a.read-paper button:hover {
     padding: 0 25px;
   }
 
-  h2.nomobile {
-    display: none;
+  div.topgallery {
+    padding: 1rem;
+  }
+  div.topgallery .input-output {
+    width: 50%;
+  }
+  div.topgallery .input-output span {
+    padding-left: calc(25% - 1.25rem);
+    padding-top: calc(12.5% - 1.25rem);
+  }
+  div.topgallery video {
+    width: 50%;
   }
 
   h2.mobileonly {
@@ -241,27 +192,14 @@ a.read-paper button:hover {
     margin: 0;
   }
 
-  div.nav {
-    position: relative;
-  }
-
-  div.nav a {
-    margin: 25px 0px;
-    display: block;
-    width: 100px;
-    padding: 10px 20px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    color: white;
-    font-family: 'Google Sans';
-  }
-
   div.content1 {
     background-color: rgb(35, 35, 35);
     color: rgb(245, 245, 245);
     display: flex;
     flex-wrap: wrap;
+  }
+  div.content1 div:first-child {
+    padding: 2rem;
   }
 
   div.content1.reversed {
@@ -274,45 +212,45 @@ a.read-paper button:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(26, 26, 26);
   }
-  
+
   div.content1 h1 {
     font-size: 1.5em;
     padding: 25px;
   }
-  
+
   div.content1 ul.highlights {
     font-size: 1em;
     margin: 0 0 0 50px;
     padding: 0 25px 0 0;
     list-style-type: decimal;
   }
-  
+
   div.content1 ul.highlights li {
     padding: 0 0 10px 0;
   }
-  
+
   div.content1 table.pretty {
     margin: 0 auto;
   }
-  
+
   div.content1 table.pretty th {
     font-size: 1em;
     font-weight: normal;
   }
-  
+
   div.content1 table.pretty th.fid {
     text-align: center;
   }
-  
+
   div.content1 table.pretty td {
     font-size: 1em;
   }
-  
+
   div.content1 table.pretty td.model {
     padding: 0 10px;
     color: rgb(123, 123, 123);
   }
-  
+
   div.content1 table.pretty td.fid {
     text-align: center;
     color: rgb(123, 123, 123);
@@ -325,26 +263,15 @@ a.read-paper button:hover {
   }
 
   div.authors {
-    padding: 25px 25px;
+    padding: 2rem;
   }
 
   div.abstract {
     font-size: 1em;
-    padding: 25px;
+    padding: 2rem;
   }
 
   div.abstract div.inside {
-    padding: 0;
-    text-align: justify;
-    margin: 0;
-  }
-
-  div.limitations {
-    font-size: 1em;
-    padding: 25px;
-  }
-
-  div.limitations div.inside {
     padding: 0;
     text-align: justify;
     margin: 0;
@@ -358,24 +285,8 @@ a.read-paper button:hover {
   div.white figure figcaption {
     bottom: 0px;
     width: 100%;
-    padding: 10px;
+    padding: 2rem;
     background-color: rgb(230, 230, 230);
-  }
-
-  div.header_light_gray {
-    color: rgb(26, 26, 26);
-    padding: 25px 10px;
-    background-color: rgb(245, 245, 245);
-  }
-
-  div.header_light_gray h1 {
-    font-size: 1.2em;
-    text-align: center;
-  }
-
-  div.header_light_gray h2 {
-    font-size: 1em;
-    text-align: center;
   }
 
   div.header_dark_gray {
@@ -394,22 +305,6 @@ a.read-paper button:hover {
     text-align: center;
   }
 
-  div.header_dark {
-    padding: 25px 10px;
-    background-color: rgb(35, 35, 35);
-    color: rgb(245, 245, 245);
-  }
-
-  div.header_dark h1 {
-    font-size: 1.2em;
-    text-align: center;
-  }
-
-  div.header_dark h2 {
-    font-size: 1em;
-    text-align: center;
-  }
-
   a.read-paper button {
     width: 140px;
     padding: 10px;
@@ -419,9 +314,13 @@ a.read-paper button:hover {
     color: white;
     border-radius: 4px;
   }
+
+  div.thanks {
+    padding: 2rem 2rem 1rem 2rem;
+  }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
   h1 {
     font-family: 'Google Sans';
     font-size: 4em;
@@ -437,21 +336,15 @@ a.read-paper button:hover {
     display: none;
   }
 
-  div.nav {
-    position: relative;
+  div.topgallery {
+    padding: 2rem 4rem;
   }
-
-  div.nav a {
-    margin: 25px 0px;
-    display: block;
-    width: 150px;
-    padding: 10px 20px;
-    position: absolute;
-    right: 0px;
-    color: white;
-    font-family: 'Google Sans';
-    float: right;
-    text-align: right;
+  div.topgallery div.input-output {
+    width: 25%;
+  }
+  div.topgallery div.input-output span {
+    padding-left: calc(12.5% - 1.25rem);
+    padding-top: calc(6.25% - 1.25rem);
   }
 
   div.content1 {
@@ -475,43 +368,43 @@ a.read-paper button:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(26, 26, 26);
   }
-  
+
   div.content1 h1 {
     font-size: 2em;
   }
-  
+
   div.content1 ul.highlights {
     font-size: 1.5em;
     margin: 0 0 0 75px;
     padding: 0;
     list-style-type: decimal;
   }
-  
+
   div.content1 ul.highlights li {
     padding: 0 0 25px 0;
   }
-  
+
   div.content1 table.pretty {
     margin: 0 auto;
   }
-  
+
   div.content1 table.pretty th {
     font-size: 1em;
   }
-  
+
   div.content1 table.pretty th.fid {
     text-align: center;
   }
-  
+
   div.content1 table.pretty td {
     font-size: 1.2em;
   }
-  
+
   div.content1 table.pretty td.model {
     padding: 0 50px;
     color: rgb(123, 123, 123);
   }
-  
+
   div.content1 table.pretty td.fid {
     text-align: center;
     color: rgb(123, 123, 123);
@@ -534,7 +427,7 @@ a.read-paper button:hover {
   div.thanks p {
     padding: 0 50px 50px 50px;
     margin: 0;
-    font-size: 2em; 
+    font-size: 2em;
   }
 
   div.thanks p.smaller {
@@ -602,25 +495,8 @@ a.read-paper button:hover {
   }
 
   div.white figure figcaption p {
-    margin: 0 auto;
     max-width: 1000px;
     font-size: 1.2em;
-  }
-
-  div.header_light_gray {
-    color: rgb(26, 26, 26);
-    padding: 50px;
-    background-color: rgb(245, 245, 245);
-  }
-
-  div.header_light_gray h1 {
-    font-size: 2.5em;
-    text-align: center;
-  }
-
-  div.header_light_gray h2 {
-    font-size: 2.0em;
-    text-align: center;
   }
 
   div.header_dark_gray {
@@ -635,22 +511,6 @@ a.read-paper button:hover {
   }
 
   div.header_dark_gray h2 {
-    font-size: 2.0em;
-    text-align: center;
-  }
-
-  div.header_dark {
-    padding: 50px;
-    background-color: rgb(35, 35, 35);
-    color: rgb(245, 245, 245);
-  }
-
-  div.header_dark h1 {
-    font-size: 2.5em;
-    text-align: center;
-  }
-
-  div.header_dark h2 {
     font-size: 2.0em;
     text-align: center;
   }
