@@ -22,7 +22,6 @@ div.white figure {
   margin: 0;
 }
 
-
 div.input-output {
   margin: 0;
   padding: 0;
@@ -89,37 +88,23 @@ div.white figure figcaption p {
 div.sota-comparisons {
   width:  100%;
   margin: 0;
-  padding: 0 160px;
-  display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   background-color: white;
-}
-div.sota-comparisons .names {
-  display: flex;
-/*  justify-content: space-around;*/
-  width: 100%;
-  font-size:  150%;
-  padding-top: 2rem;
-}
-div.sota-comparisons .names span {
-  width: 16%;
-  display: block;
   color: black;
   text-align: center;
 }
-div.sota-comparisons .names span:first-child {
-  width: 20%;
-  text-align: left;
-  padding-left: 2.5rem;
-}
-div.sota-comparisons div.input-output {
+div.sota-comparisons .row {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  margin: 0;
 }
-div.sota-comparisons div.input-output img {
-  width: 16%;
+div.sota-comparisons .col img {
+  width: 100%;
+}
+div.sota-comparisons .col video {
+  width: 100%;
 }
 
 div.authors {
@@ -178,7 +163,7 @@ a.read-paper button:hover {
     width: 50%;
   }
   div.topgallery .input-output span {
-    padding-left: calc(25% - 1.25rem);
+    padding-left: calc(25% - 1.5rem);
     padding-top: calc(12.5% - 1.25rem);
   }
   div.topgallery video {
@@ -318,6 +303,21 @@ a.read-paper button:hover {
   div.thanks {
     padding: 2rem 2rem 1rem 2rem;
   }
+
+  div.sota-comparisons.nomobile {
+    display: none;
+  }
+  div.sota-comparisons.mobileonly {
+    display: flex;
+    padding: 0.5rem;
+  }
+  div.sota-comparisons .col {
+    width: 25%;
+    padding: 0;
+  }
+  div.sota-comparisons .col:first-child {
+    padding-top: calc(12.5vw - 1rem);
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -332,8 +332,19 @@ a.read-paper button:hover {
     padding: 0 25px;
   }
 
-  h2.mobileonly {
+  div.sota-comparisons.mobileonly {
     display: none;
+  }
+  div.sota-comparisons.nomobile {
+    display: flex;
+    padding: 0 6rem;
+  }
+  div.sota-comparisons .row:first-child {
+    padding-top: 2rem;
+  }
+  div.sota-comparisons .col {
+    width: 16%;
+    font-size: 150%;
   }
 
   div.topgallery {
@@ -343,7 +354,7 @@ a.read-paper button:hover {
     width: 25%;
   }
   div.topgallery div.input-output span {
-    padding-left: calc(12.5% - 1.25rem);
+    padding-left: calc(12.5% - 1.5rem);
     padding-top: calc(6.25% - 1.25rem);
   }
 

@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <link href="bootstrap.min.css" rel="stylesheet" /> -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -61,7 +59,6 @@ We compare 3DiMs to prior work on the SRN ShapeNet dataset, demonstrating that 3
         </p>
         <br>
         <a class="read-paper" href="./static/paper.pdf" target="_blank"><button>Research Paper</button></a>
-        <!-- <a class="read-paper" style="margin-left: 20px;" target="_blank" href="https://docs.google.com/spreadsheets/d/1y7nAbmR4FREi6npB1u-Bo3GFdwdOPYJc617rBOxIRHY/edit#gid=0"><button>Evaluations</button></a> -->
       </div>
     </div>
 
@@ -165,44 +162,78 @@ We compare 3DiMs to prior work on the SRN ShapeNet dataset, demonstrating that 3
       </div>
     </div>
 
-    <div class="sota-comparisons">
-      <div class="names">
-        <span>Input View</span>
-        <span>SRN</span>
-        <span>PixelNeRF</span>
-        <span>VisionNeRF</span>
-        <span><b>3DiM (ours)</b></span>
-        <span>Ground Truth</span>
+    <div class="sota-comparisons nomobile">
+      <div class="row">
+        <div class="col">Input View</div>
+        <div class="col">SRN</div>
+        <div class="col">PixelNeRF</div>
+        <div class="col">VisionNeRF</div>
+        <div class="col"><b>3DiM (ours)</b></div>
+        <div class="col">Ground Truth</div>
       </div>
-      <div class="input-output">}
-        <img src="./static/sota_comparisons/10_cond.png"/>
-        <span>&#8594</span>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/srn/10_hyp.mp4"></video>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/pixelnerf/10_hyp.mp4"></video>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/visionnerf/10_hyp.mp4"></video>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/ours/10_hyp.mp4"></video>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/10_tgt.mp4"></video>
+      <div class="row">
+        <div class="col"><img src="./static/sota_comparisons/10_cond.png"/></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/srn/10_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/pixelnerf/10_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/visionnerf/10_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/ours/10_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/10_tgt.mp4"></video></div>
       </div>
-      <div class="input-output">
-        <img src="./static/sota_comparisons/106_cond.png"/>
-        <span>&#8594</span>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/srn/106_hyp.mp4"></video>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/pixelnerf/106_hyp.mp4"></video>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/visionnerf/106_hyp.mp4"></video>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/ours/106_hyp.mp4"></video>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/106_tgt.mp4"></video>
+      <div class="row">
+        <div class="col"><img src="./static/sota_comparisons/106_cond.png"/></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/srn/106_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/pixelnerf/106_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/visionnerf/106_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/ours/106_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/106_tgt.mp4"></video></div>
       </div>
-      <div class="input-output">
-        <img src="./static/sota_comparisons/138_cond.png"/>
-        <span>&#8594</span>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/srn/138_hyp.mp4"></video>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/pixelnerf/138_hyp.mp4"></video>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/visionnerf/138_hyp.mp4"></video>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/ours/138_hyp.mp4"></video>
-        <video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/138_tgt.mp4"></video>
+      <div class="row">
+        <div class="col"><img src="./static/sota_comparisons/138_cond.png"/></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/srn/138_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/pixelnerf/138_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/visionnerf/138_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/ours/138_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/138_tgt.mp4"></video></div>
       </div>
     </div>
-
+    <div class="sota-comparisons mobileonly">
+      <div class="row">
+        <div class="col">Input View</div>
+        <div class="col"><img src="./static/sota_comparisons/10_cond.png"/></div>
+        <div class="col"><img src="./static/sota_comparisons/106_cond.png"/></div>
+        <div class="col"><img src="./static/sota_comparisons/138_cond.png"/></div>
+      </div>
+      <div class="row">
+        <div class="col">SRN</div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/srn/10_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/srn/106_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/srn/138_hyp.mp4"></video></div>
+      </div>
+      <div class="row">
+        <div class="col">PixelNeRF</div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/pixelnerf/10_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/pixelnerf/106_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/pixelnerf/138_hyp.mp4"></video></div>
+      </div>
+      <div class="row">
+        <div class="col">VisionNeRF</div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/visionnerf/10_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/visionnerf/106_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/visionnerf/138_hyp.mp4"></video></div>
+      </div>
+      <div class="row">
+        <div class="col"><b>3DiM (ours)</b></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/ours/10_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/ours/106_hyp.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/ours/138_hyp.mp4"></video></div>
+      </div>
+      <div class="row">
+        <div class="col">Real Data</div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/10_tgt.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/106_tgt.mp4"></video></div>
+        <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/sota_comparisons/138_tgt.mp4"></video></div>
+      </div>
+    </div>
     <div class="abstract">
       <div class="inside">
         <h2 style="text-align: center;">State-of-the-art FID scores on SRN ShapeNet</h2>
