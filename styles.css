@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+video::-internal-media-controls-overlay-cast-button {
+  display: none;
+}
+
 div.white {
   background-color: rgb(255, 255, 255);
   color: rgb(26, 26, 26);
